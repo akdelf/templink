@@ -2,7 +2,7 @@
 
 	class templink {
 
-		static function add($link) {
+		static function generate($link) {
 
 			$secfile = 'templink/'.md5($link.date('d.m.yH:i:s'));
 			file_put_contents(SITEPATH.$secfile, $link);
@@ -15,7 +15,7 @@
 		/**
 		* возвращаем ссылку если не истекло время
 		*/
-		static function load($file, $time = 3600) {
+		static function upload($file, $time = 3600) {
 		
 			if (!)
 
